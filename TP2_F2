@@ -1,0 +1,208 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{multirow}
+
+\renewcommand{\abstractname}{Resumen}
+\def\tablename{Tabla}
+
+\title{TP 1: Péndulo de Pohl}
+\author{Apellido1 Nombre1, \href{mgranado@itba.edu.ar}{integrante1@itba.edu.ar} 
+\and Apellido2 Nombre2, \href{hugo.aita@itba.edu.ar}{integrante2@itba.edu.ar}
+\and Apellido3 Nombre3, \href{pkonig@itba.edu.ar}{integrante3@itba.edu.ar}
+}
+
+\date{\textbf{GRUPO X9} - 30 de febrero de 2030}
+
+\begin{document}
+\maketitle
+
+% RESUMEN
+\begin{abstract}
+En el resumen se debe explicar clara y brevemente qué problema se abordó, de qué manera (es decir, con qué dispositivo experimental se trabajó) y cuáles fueron los principales resultados obtenidos (escribir cuánto dió cada resultado importante). Esta sección se puede pensar como independiente del cuerpo del trabajo en el sentido de que debe ser autocontenida y entenderse por sí misma.
+
+\textit{Ejemplo}: Mediante un péndulo de Pohl se estudiaron oscilaciones libres, amortiguadas y forzadas ... se midió el período, etc ... para el período se obtuvo que $T = (10,2 \pm 0,1) \ \mathrm{s}$, etc ... Se pudo concluir que las mediciones del período ...
+\end{abstract}
+
+\section{Introducción}
+En esta sección deben figurar los conceptos teóricos necesarios para comprender el problema o sistema estudiado. No es necesario, en el contexto de la cursada de este laboratorio, realizar un desarrollo teórico exhaustivo, pero sí deben mencionarse los principales resultados teóricos que,
+en general, se van a expresar en forma de ecuaciones sobre magnitudes que serán medidas experimentalmente en la práctica. Para esta sección se puede tomar información de las guías de laboratorio, las guías de ejercicios o la bibliografía sugerida. Tener en cuenta que en esta sección deben estar incluidas TODAS las ecuaciones necesarias para el análisis de los datos, las cuales deben ir numeradas. Al igual que en el caso de las figuras y de las tablas, la idea es que las podamos referenciar fácilmente, ya sea en el cuerpo del trabajo o, por ejemplo en una discusión oral. Por este último motivo es que es relevante numerar aun a aquellas que no se citen en el propio trabajo.
+
+
+\textit{Ejemplo}: El péndulo de Pohl consiste en un disco que  ...
+
+\subsection{Oscilador libre}
+
+... sin fuerza externa ni fricción, tenemos el sistema de de oscilaciones libres ... y la solución para este régimen es
+
+\begin{equation}
+    \varphi(t) = \varphi_0 \ cos(\omega_0 t),
+\end{equation}
+donde $\varphi_0$ es la amplitud, $\omega_0$ la frecuencia natural dada por
+
+\begin{equation}\label{eq2}
+    \omega_0=\frac{2\pi}{T},
+\end{equation}
+con $T$ el período de oscilación del sistema ...
+
+
+\subsection{Oscilador amortiguado}
+
+... con el freno se tiene que ...
+
+\begin{equation}
+    \varphi(t) = ... ,
+\end{equation}
+donde $\omega'$ ..
+
+\subsection{Oscilador forzado}
+
+... si actúa el forzado ...
+\begin{equation}
+    \varphi(t) = ... ,
+\end{equation}
+donde ... y $\delta$ estará dado por
+\begin{equation}
+    \delta = ... ,
+\end{equation}
+con $M_{max}$ ...
+
+\textit{(Todo esto es a modo de ejemplo, por lo que deberán colocar las ecuaciones que utilizaron para los experimentos en la manera que consideren más apropiada). Recuerden respetar fielmente el formato, en cuanto a los signos de puntuación en las ecuaciones, no dejar sangría luego de una ecuación, la enumeración de las mismas, explicar/desarrollar la totalidad de las variables de una ecuación, etc.}
+
+
+\section{Método experimental}
+
+Aquí debe detallarse exhaustivamente todo lo que se hizo en el transcurso de la práctica que sea relevante para la comprensión de la misma. Si bien los lectores del informe en este caso son los docentes de la materia, debe estar escrito de manera tal que alguien que no haya estado presente durante la realización de la práctica entienda claramente qué es lo que se hizo (esto puede incluir detalles que no necesariamente están incluidos en el modelo de informe que acompaña a esta guía). Además, es fundamental incluir una o más figuras que muestren el dispositivo experimental montado o utilizado, ya sea una foto y/o un esquema. Cada una estas figuras deben ser acompañadas debajo por una leyenda en donde figure:
+\begin{itemize}
+    \item “Figura”. Aunque esta aclaración parezca redundante, el punto es que no se debe colocar ninguna otra denominación más que estas dos: todas las imágenes ya sean gráficos, fotos, diagramas, esquemas, etc., caen bajo la denominación de “figura”.
+    \item El número de la figura (N). El objetivo de numerar las figuras es poder referenciarlas fácilmente en el cuerpo del trabajo.
+    \item Una descripción breve que explique qué es lo que se está observando. La idea es que el lector pueda captar, a golpe de vista, qué información brinda la figura en cuestión sin necesidad, en la medida posible, de tener que referirnos al cuerpo del trabajo para tener un entendimiento en términos generales.
+\end{itemize}
+
+\textit{Ejemplo}: Para llevar a cabo el experimento se utilizó un Péndulo de Pohl, como el que se puede observar en la Figura \ref{fig1}. Además, para todas las experiencias se utilizó un cronómetro marca Casio con una incerteza de $0.01$ s y además se utilizó ... 
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=6cm]{pohl-esquema.png}
+    \caption{Acá va una descripción de esquema/figura/fotografía que se muestra. Recordar etiquetar todos los componentes/instrumentos utilizados que se observen en la imagen. \textit{Ejemplo:} Esquema utilizado para el armado experimental, donde se puede observar el Péndulo de Pohl (A), el instrumento X (B), el instrumento Y (C), etc..}
+    \label{fig1}
+\end{figure}
+
+\subsection{Oscilador libre}
+
+\textit{Contar acá qué se midió (variables, procedimientos, etc) y cómo se midió (técnicas, metodología, instrumentos utilizados y cómo se configuraron los mismos, etc)}
+
+\subsection{Oscilador amortiguado}
+
+\textit{lo mismo que en la subsección anterior}
+
+\subsection{Oscilador forzado}
+
+\textit{lo mismo que en la subsección anterior}
+
+
+\section{Resultados}
+
+Esta sección incluye no sólo los resultados concretos obtenidos, que pueden mostrarse a través de tablas o gráficos, sino también una discusión de los mismos (¿los resultados coinciden con lo esperado a partir del marco teórico? ¿Sí? ¿No? ¿Por qué?). Esto último es tan importante como la presentación misma de los resultados.
+
+En cuanto a la presentación de resultados, en esta sección no deben aparecer ni tablas ni figuras solas, sino que debe haber texto que los introduzca (\textit{por ejemplo: “En la tabla N se muestran los períodos medidos en la experiencia descrita en la sección M”}), así como discusiones sobre los resultados allí mostrados. Toda la reglamentación antes mencionada para las figuras también aplica a las tablas (“Tabla", numeración y texto explicativo).
+
+En particular para las figuras en que se muestren resultados/mediciones experimentales (en su gran mayoría serán gráficos) deben figurar necesariamente los puntos que se corresponden a los valores medidos, eventualmente acompañados de barras de error (opcional para la materia). Es decir, es formalmente incorrecto mostrar solamente una línea continua sin los puntos que la forman. Existen ciertos casos, como por ejemplo cuando se ajustan los datos por una función, en las que aparece una línea continua sobre los datos. Además, en todos los ejes de los gráficos deben figurar la magnitud que se está representando y las unidades correspondientes. En los casos en que la magnitud en cuestión sea adimensional o sólo sea relevante su cantidad relativa se pueden definir las unidades del eje como “unidades arbitrarias (u.a.)''.
+
+
+\subsection{Oscilador libre}
+
+\textit{Ejemplo}: A partir de las 10 mediciones realizadas para distintos ángulos iniciales, se obtuvieron los períodos que se pueden observar en la Tabla \ref{tabla1}, .... y luego de hacer las N mediciones se calculó el promedio para finalmente obtener que $T = (1.756 \pm 0.002) \ \mathrm{s}$ ... por medio de la ecuación \ref{eq2} se calculó que ...
+
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|c|c|c|} 
+    \hline
+    \multirow{2}{0.4cm}{$N$} & $\varphi_i$ (u.a) & $T$ (s) \\ 
+     & $ \Delta\varphi_i=0,2$ (u.a) & $\Delta T_{inst}=0,001$ (s) \\  \hline
+         1  &   2,4  &   1,640 \\
+         2  &   2,6  &   1,642 \\ 
+        ... &   ...  &   ...   \\ \hline
+    \end{tabular}
+    \caption{Esto es la leyenda de la tabla. \textit{Ejemplo}: Datos recolectados para el caso de oscilador libre en el cual se midieron ...}
+    \label{tabla1}
+\end{table}
+
+
+
+\subsection{Oscilador amortiguado}
+
+\textit{Ejemplo}: Para el caso del oscilador amortiguado, al soltar el péndulo desde el ángulo $\varphi_0=...$ se obtuvo un pseudoperíodo de ... y por último se pudo calcular un factor de calidad $Q=10.2 \pm 0.5$ por medio de la ecuación X ...
+
+\subsection{Oscilador forzado}
+
+\textit{Ejemplo}: Finalmente ... los datos registrados se volcaron en la Tabla \ref{tabla2}, donde también se calculó el $\omega_e$ para cada período registrado ... y luego de haber calculado esto se graficó $\omega_e$ vs $\varphi_e$ en la Figura \ref{fig2} (\textit{acá primero pueden poner un gráfico con los puntos adquiridos y luego otro con el ajuste y el cálculo de $\Delta \omega$, elijan uds. como presentar los datos}). 
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|} 
+    \hline
+    \multirow{2}{1.7cm}{Tensión de motor} & $\varphi_e$ (u.a) & $T_e$ (s) & \multirow{2}{2.55cm}{$\omega_e=\frac{2\pi}{T_e} \ (\mathrm{s}^{-1})$ } & \multirow{2}{1.75cm}{$\Delta \omega_e \ (\mathrm{s}^{-1})$}\\ 
+     & $ \Delta\varphi_e=0,2$ (u.a) & $\Delta T_e=0,001$ (s) &  & \\  \hline
+         7,00  &   4,4  &   1,740 &   1,427  &   0,001 \\
+         7,10  &   4,6  &   1,742 &   1,395  &   0,003 \\ 
+        ... &   ...  &   ... &   ...  &   ...  \\ \hline
+    \end{tabular}
+    \caption{Esto es la leyenda de la tabla. \textit{Ejemplo}: Datos recolectados para el caso de oscilador forzado en el cual se midieron ...}
+    \label{tabla2}
+\end{table}
+
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=8cm]{pohl-grafico.png}
+    \caption{Acá va una descripción del gráfico, las variables medidas y la forma en que midieron lo que se muestra. }
+    \label{fig2}
+\end{figure}
+
+
+\section{Conclusión}
+
+Podemos pensar en esta sección como un resumen extendido, en el sentido de que debe, nuevamente, resumir lo que se hizo y exponer los resultados y discusiones dadas, ahora enriquecidos por la información que se brindó en el cuerpo del trabajo.
+
+\textit{Ejemplo}: Se pudo observar que ... al comparar el factor de calidad obtenido en el caso subamortiguado con el obtenido
+a partir del gráfico del forzado se obtuvieron que eran semejantes (\textit{en que orden? en cuanto porciento?}) ...
+
+
+\section{Bibliografía}
+\begin{itemize}
+    \item Apuntes de la clase teórica ... del tema ....
+    \item \textit{Nombre del libro, autor, año}
+    \item \hyperlink{http://www.sc.ehu.es/...}{http://www.sc.ehu.es/...}
+\end{itemize}
+
+\section{Apéndice de incertezas}
+
+La incerteza para la frecuencia natural $\omega_0$ se obtiene como
+
+\begin{equation}
+    \Delta\omega_0= ...
+\end{equation}
+ 
+lo mismo que para $\omega'$, la cual resulta ser
+
+\begin{equation}
+    \Delta\omega'= ...
+\end{equation}
+
+En el caso del tiempo característico
+\begin{equation}
+    \Delta \tau = ...
+\end{equation}
+
+y el factor de calidad del experimento subamortiguado tiene una incerteza de
+
+\begin{equation}
+    \Delta Q_{amort} = 
+\end{equation}
+
+... \textit{(y así con todas las incertezas calculadas en el trabajo)}
+
+\end{document}
