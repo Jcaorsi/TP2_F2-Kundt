@@ -3,6 +3,9 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{multirow}
+\usepackage{float}
+\setlength{\arrayrulewidth}{0.5mm} % Optional: Adjust table border width
+\setlength{\tabcolsep}{5pt} % Optional: Adjust column spacing
 
 \renewcommand{\abstractname}{Resumen}
 \def\tablename{Tabla}
@@ -21,9 +24,11 @@
 
 % RESUMEN
 \begin{abstract}
+
 En el resumen se debe explicar clara y brevemente qué problema se abordó, de qué manera (es decir, con qué dispositivo experimental se trabajó) y cuáles fueron los principales resultados obtenidos (escribir cuánto dió cada resultado importante). Esta sección se puede pensar como independiente del cuerpo del trabajo en el sentido de que debe ser autocontenida y entenderse por sí misma.
 
 \textit{Ejemplo}: Mediante un péndulo de Pohl se estudiaron oscilaciones libres, amortiguadas y forzadas ... se midió el período, etc ... para el período se obtuvo que $T = (10,2 \pm 0,1) \ \mathrm{s}$, etc ... Se pudo concluir que las mediciones del período ...
+
 \end{abstract}
 
 \section{¿El micrófono mide variaciones de presión o desplazamientos del aire?}
@@ -31,6 +36,62 @@ En el resumen se debe explicar clara y brevemente qué problema se abordó, de q
 
 \section{Frecuencia del modo fundamental y la frecuencia de los siguientes tres armónicos}
 
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|}
+    \hline
+    \multirow{1}{2.1cm}{\centering Armónicos} 
+        & $f_n$ (s$^{-1}$) \\
+    \hline
+    $f_1$  & 160 \\ \hline
+    $f_2$  & 300 \\ \hline
+    $f_3$  & 212 \\ \hline
+    $f_4$  & 1177  \\ \hline
+    \end{tabular}
+    \caption{Armónicos de la onda estudiada obtenidos a partir de la experiencia}
+    \label{tabla1}
+\end{table}
+
+\section{Velocidad del sonido}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|}
+    \hline
+    \multirow{1}{2.1cm}{\centering $f_n$} 
+        & $V_n$ ($\frac{m}{s}$) \\
+    \hline
+    $f_1$  & 346 \\ \hline
+    $f_2$  & 333 \\ \hline
+    $f_3$  & 320 \\ \hline
+    $f_4$  & 294  \\ \hline
+    \end{tabular}
+    \caption{Velocidad del sonido obtenida en base a los armónicos hayados en la tabla \ref{tabla1}}
+    \label{tabla2}
+\end{table}
+
+Luego buscamos el promedio de la velocidad del sonido, obteniendo aproximadamente $V_s = 323 \ \mathrm{m/s}$.
+\section{Factor de calidad}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|}
+    \hline
+    \multirow{1}{2.1cm}{\centering Armónicos} 
+        & $V_\mathrm{max} (mV)$
+        & $\frac{V_\mathrm{max}}{\sqrt{2}}$ $(mV)$ 
+        & $f^+$ (s$^{-1}$) 
+        & $f^-$ (s$^{-1}$)
+        & $Q$ \\
+    \hline
+    $f_1$  & 160 & 113 & 357 & 337 & 17\\ \hline
+    $f_2$  & 300 & 212 & 673 & 659 & 48\\ \hline
+    $f_3$  & 212  & 150 & 980 & 945 & 27\\ \hline
+    $f_4$  & 200  & 140 & 1249 & 1090 & 7\\ \hline
+    \end{tabular}
+    \caption{Datos obtenidos a partir de la experiencia y del reemplazo de los mismos en la ecuación del factor de calidad}
+    \label{tabla3}
+\end{table}
 
 
 
@@ -46,16 +107,13 @@ En el resumen se debe explicar clara y brevemente qué problema se abordó, de q
 
 
 
-
-
-\textit{Ejemplo}: El péndulo de Pohl consiste en un disco que  ...
-
+%CORTA ACÄ NUESTRO TP
 \subsection{Oscilador libre}
 
 ... sin fuerza externa ni fricción, tenemos el sistema de de oscilaciones libres ... y la solución para este régimen es
 
 \begin{equation}
-    \varphi(t) = \varphi_0 \ cos(\omega_0 t),
+    \frac{\mathrm{d}}{\mathrm{d}x}\left[3 \sin\left({\phi}\right)\right],
 \end{equation}
 donde $\varphi_0$ es la amplitud, $\omega_0$ la frecuencia natural dada por
 
@@ -153,19 +211,7 @@ En particular para las figuras en que se muestren resultados/mediciones experime
 
 \textit{Ejemplo}: Finalmente ... los datos registrados se volcaron en la Tabla \ref{tabla2}, donde también se calculó el $\omega_e$ para cada período registrado ... y luego de haber calculado esto se graficó $\omega_e$ vs $\varphi_e$ en la Figura \ref{fig2} (\textit{acá primero pueden poner un gráfico con los puntos adquiridos y luego otro con el ajuste y el cálculo de $\Delta \omega$, elijan uds. como presentar los datos}). 
 
-\begin{table}[ht]
-    \centering
-    \begin{tabular}{|c|c|c|c|c|} 
-    \hline
-    \multirow{2}{1.7cm}{Tensión de motor} & $\varphi_e$ (u.a) & $T_e$ (s) & \multirow{2}{2.55cm}{$\omega_e=\frac{2\pi}{T_e} \ (\mathrm{s}^{-1})$ } & \multirow{2}{1.75cm}{$\Delta \omega_e \ (\mathrm{s}^{-1})$}\\ 
-     & $ \Delta\varphi_e=0,2$ (u.a) & $\Delta T_e=0,001$ (s) &  & \\  \hline
-         7,00  &   4,4  &   1,740 &   1,427  &   0,001 \\
-         7,10  &   4,6  &   1,742 &   1,395  &   0,003 \\ 
-        ... &   ...  &   ... &   ...  &   ...  \\ \hline
-    \end{tabular}
-    \caption{Esto es la leyenda de la tabla. \textit{Ejemplo}: Datos recolectados para el caso de oscilador forzado en el cual se midieron ...}
-    \label{tabla2}
-\end{table}
+
 
 
 \begin{figure}[ht]
