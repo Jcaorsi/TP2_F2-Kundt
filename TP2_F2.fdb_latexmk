@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1744592941.44471 "c:/Users/caorsi/.vscode/TP2_F2-Kundt/TP2_F2.tex" "TP2_F2.pdf" "TP2_F2" 1744592942.48023 0
+["pdflatex"] 1744659248.82307 "c:/Users/caorsi/.vscode/TP2_F2-Kundt/TP2_F2.tex" "TP2_F2.pdf" "TP2_F2" 1744659250.09494 0
   "C:/Users/caorsi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1744592198 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/caorsi/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1744297199 12036614 b933ce3efc9a72cef6acbcbef4d58cab ""
   "C:/Users/caorsi/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx10.tfm" 1136765053 1328 c834bbb027764024c09d3d2bf908b5f0 ""
@@ -22,6 +22,7 @@
   "C:/Users/caorsi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1247596666 32080 340ef9bf63678554ee606688e7b5339d ""
   "C:/Users/caorsi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1247596667 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "C:/Users/caorsi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1247596667 36741 0ee9e374ec3e30da87cdfb0ea3575226 ""
+  "C:/Users/caorsi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb" 1247596666 37166 8ab3487cbe3ab49ebce74c29ea2418db ""
   "C:/Users/caorsi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1247596666 35469 dcf3a5f2fc1862f5952e3ee5eb1d98c4 ""
   "C:/Users/caorsi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
   "C:/Users/caorsi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1247596667 32722 d7379af29a190c3f453aba36302ff5a9 ""
@@ -80,10 +81,10 @@
   "C:/Users/caorsi/AppData/Local/Programs/MiKTeX/tex/latex/refcount/refcount.sty" 1576433952 9878 9e94e8fa600d95f9c7731bb21dfb67a4 ""
   "C:/Users/caorsi/AppData/Local/Programs/MiKTeX/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1657800696 9714 ba3194bd52c8499b3f1e3eb91d409670 ""
   "C:/Users/caorsi/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
-  "TP2_F2.aux" 1744592942 5100 450b949f0b1639cd93b87ddd982b859c "pdflatex"
-  "TP2_F2.out" 1744592942 2965 4cdd1b2fdaff3b7eb8cb16283665153b "pdflatex"
-  "TP2_F2.tex" 1744592940 12321 818f937c82136dda16d9ec249c6e51c2 ""
-  "c:/Users/caorsi/.vscode/TP2_F2-Kundt/TP2_F2.tex" 1744592940 12321 818f937c82136dda16d9ec249c6e51c2 ""
+  "TP2_F2.aux" 1744659249 5027 f6e9d21dbf627360b1050d88ea30067b "pdflatex"
+  "TP2_F2.out" 1744659249 2965 4cdd1b2fdaff3b7eb8cb16283665153b "pdflatex"
+  "TP2_F2.tex" 1744659246 13778 3aa1c59c229779606d2ccfc6776c629b ""
+  "c:/Users/caorsi/.vscode/TP2_F2-Kundt/TP2_F2.tex" 1744659246 13778 3aa1c59c229779606d2ccfc6776c629b ""
   (generated)
   "TP2_F2.aux"
   "TP2_F2.log"

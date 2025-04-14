@@ -36,21 +36,32 @@ En el resumen se debe explicar clara y brevemente qué problema se abordó, de q
 
 \section{Frecuencia del modo fundamental y la frecuencia de los siguientes tres armónicos}
 
+Se sabe que
+\begin{equation}
+    f_{n}=\frac{n\cdot v}{2L}
+\end{equation}
+
+donde $v$ es la velocidad del sonido, L el largo del tubo, $n$ el número de armónico y $f_{n}$ la frecuencia del armónico n. También sabemos que $v_{sonido}\simeq 330 \frac{m}{s}$ y que $L=0,5 m$
+$\Rightarrow f_{1}=\frac{330 \frac{m}{s} }{2 \cdot 0,5m} \simeq 330 Hz $. Empleando este valor y la relación $f_{n}=n\cdot f_{1}$ se buscaron los valores teóricos de armónicos $f_{n}$. Luego, para encontrar los valores experimentales, se varió la frecuencia del generador de funciones; a medida que aumentaba la frecuencia del generador, se podía observar en el osciloscopio cómo aumentaba la amplitud de la señal hasta excederse la frecuencia $f_{n}$, entonces la amplitud comenzaba a decrementarse, para luego volver a incrementarse hasta llegar a $f_{n+1}$. Los armónicos eran las frecuencias para las cuales la amplitud rebotaba.
+De esta manera, encontramos los siguientes datos:
+
 \begin{table}[H]
     \centering
-    \begin{tabular}{|c|c|}
+    \begin{tabular}{|c|c|c|}
     \hline
-    \multirow{1}{2.1cm}{\centering Armónicos} 
-        & $f_n$ (s$^{-1}$) \\
+    \multirow{2}{2.1cm}{ Armónicos }
+        & Valores Teóricos (Hz) & Valores Experimentales (Hz)\\
     \hline
-    $f_1$  & 160 \\ \hline
-    $f_2$  & 300 \\ \hline
-    $f_3$  & 212 \\ \hline
-    $f_4$  & 1177  \\ \hline
+    $f_1$  & 330  & 346 \\ \hline
+    $f_2$  & 660 & 666 \\ \hline
+    $f_3$  & 990 & 960 \\ \hline
+    $f_4$  & 1320  & 1177 \\ \hline
     \end{tabular}
-    \caption{Armónicos de la onda estudiada obtenidos a partir de la experiencia}
+    \caption{Armónicos de la onda estudiada.}
     \label{tabla1}
 \end{table}
+Se puede observar que los valores experimentales de los armónicos difieren de los teóricos. Una conjetura sobre la razón de esta diferencia es que el tubo no es ideal (entre otras razones porque posee cierto grado de porosidad) entonces se disipa energía por fuera del sistema. Se puede notar esto porque el sonido escapa por fuera del tubo y llegó a oídos de los alumnos participantes en el experimento, lo cual en un sistema ideal no hubiera ocurrido.
+
 
 \section{Velocidad del sonido}
 
