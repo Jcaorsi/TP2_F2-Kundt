@@ -1,40 +1,94 @@
-\documentclass[12pt,a4paper]{article}
-\usepackage[spanish,es-tabla]{babel}
+% ******************************
+%* FILE CONFIGURATION
+% ******************************
+
+\documentclass[12pt, a4paper]{article}
+
+% Enables Spanish language support and table naming
+\usepackage[spanish, es-tabla]{babel}
+
+% Enables creation of hyperlinks in the document
 \usepackage{hyperref}
+
+% Enables inclusion of images and figures
 \usepackage{graphicx}
+
+% Provides multirow functionality for tables
 \usepackage{multirow}
+
+% Provides better control for floating elements like tables and figures
 \usepackage{float}
-\setlength{\arrayrulewidth}{0.5mm} % Optional: Adjust table border width
-\setlength{\tabcolsep}{5pt} % Optional: Adjust column spacing
 
-\renewcommand{\abstractname}{Resumen}
-\def\tablename{Tabla}
+% Sets page margins
+\usepackage[left=2.5cm, right=2.5cm, top=2cm, bottom=2cm]{geometry}
 
-\title{TP 2: Tubo de Kundt}
-\author{Tamagnini Ana, \href{atamagnini@itba.edu.ar}{atamagnini@itba.edu.ar} 
-\and Moschini Rita, \href{rmoschini@itba.edu.ar}{rmoschini@itba.edu.ar}
-\and Dib Ian, \href{idin@itba.edu.ar}{idib@itba.edu.ar}
-\and Caorsi Juan Ignacio, \href{jcaorsi@itba.edu.ar}{jcaorsi@itba.edu.ar}
+% Allows customization of headers and footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % Clears all header and footer fields
+\fancyfoot[C]{\thepage} % Centers the page number at the footer
+\renewcommand{\headrulewidth}{0pt} % Removes the header line
+\renewcommand{\footrulewidth}{0pt} % Removes the footer line
+
+% Forces the same style on first page
+\fancypagestyle{plain}
+{
+  \fancyhf{}
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
 }
 
-\date{\textbf{GRUPO 4} - 15 de abril de 2025}
+% Adjusts table border width
+\setlength{\arrayrulewidth}{0.5mm}
+
+% Adjusts spacing between table columns
+\setlength{\tabcolsep}{5pt}
+
+% Changes the name of the table caption
+\def\tablename{Tabla}
+
+
+% ******************************
+%* NEW COMMANDS
+% ******************************
+
+% Creates a custom numbered question command
+\newcounter{order}
+\newcommand{\order}[1]
+{
+  \par\vspace{2ex}
+  \stepcounter{order}
+  \noindent\textbf{\arabic{order}.} #1\par\vspace{1ex}
+}
+
+
+% ******************************
+%* ARTICLE SECTIONS
+% ******************************
+
+\title{TP 2: Tubo de Kundt}
+\author
+{
+  Caorsi Juan Ignacio, \href{jcaorsi@itba.edu.ar}{jcaorsi@itba.edu.ar} \\
+  Dib Ian, \href{idib@itba.edu.ar}{idib@itba.edu.ar} \\
+  Moschini Rita, \href{rmoschini@itba.edu.ar}{rmoschini@itba.edu.ar} \\
+  Tamagnini Ana, \href{atamagnini@itba.edu.ar}{atamagnini@itba.edu.ar}
+}
+
+\date{Grupo 4 - 15/04/2025}
 
 \begin{document}
 \maketitle
 
-% RESUMEN
-\begin{abstract}
+%* FIRST QUESTION
+\order{¿El micrófono mide variaciones de presión o desplazamientos del aire?}
 
-En el resumen se debe explicar clara y brevemente qué problema se abordó, de qué manera (es decir, con qué dispositivo experimental se trabajó) y cuáles fueron los principales resultados obtenidos (escribir cuánto dió cada resultado importante). Esta sección se puede pensar como independiente del cuerpo del trabajo en el sentido de que debe ser autocontenida y entenderse por sí misma.
-
-\textit{Ejemplo}: Mediante un péndulo de Pohl se estudiaron oscilaciones libres, amortiguadas y forzadas ... se midió el período, etc ... para el período se obtuvo que $T = (10,2 \pm 0,1) \ \mathrm{s}$, etc ... Se pudo concluir que las mediciones del período ...
-
-\end{abstract}
-
-\section{¿El micrófono mide variaciones de presión o desplazamientos del aire?}
+(Juani)
 
 
-\section{Frecuencia del modo fundamental y la frecuencia de los siguientes tres armónicos}
+%* SECOND QUESTION
+\order{Determine la frecuencia del modo fundamental y la frecuencia de los siguientes tres armónicos.}
 
 Se sabe que
 \begin{equation}
@@ -63,7 +117,8 @@ De esta manera, encontramos los siguientes datos:
 Se puede observar que los valores experimentales de los armónicos difieren de los teóricos. Una conjetura sobre la razón de esta diferencia es que el tubo no es ideal (entre otras razones porque posee cierto grado de porosidad) entonces se disipa energía por fuera del sistema. Se puede notar esto porque el sonido escapa por fuera del tubo y llegó a oídos de los alumnos participantes en el experimento, lo cual en un sistema ideal no hubiera ocurrido.
 
 
-\section{Velocidad del sonido}
+%* THIRD QUESTION
+\order{Calcule la velocidad del sonido}
 
 \begin{table}[H]
     \centering
@@ -82,7 +137,10 @@ Se puede observar que los valores experimentales de los armónicos difieren de l
 \end{table}
 
 Luego buscamos el promedio de la velocidad del sonido, obteniendo aproximadamente $V_s = 323 \ \mathrm{m/s}$.
-\section{Factor de calidad}
+
+
+%* FOURTH QUESTION
+\order{Determine el factor de calidad}
 
 \begin{table}[H]
     \centering
@@ -103,176 +161,5 @@ Luego buscamos el promedio de la velocidad del sonido, obteniendo aproximadament
     \caption{Datos obtenidos a partir de la experiencia y del reemplazo de los mismos en la ecuación del factor de calidad}
     \label{tabla3}
 \end{table}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-%CORTA ACÄ NUESTRO TP
-\subsection{Oscilador libre}
-
-... sin fuerza externa ni fricción, tenemos el sistema de de oscilaciones libres ... y la solución para este régimen es
-
-\begin{equation}
-    \frac{\mathrm{d}}{\mathrm{d}x}\left[3 \sin\left({\phi}\right)\right],
-\end{equation}
-donde $\varphi_0$ es la amplitud, $\omega_0$ la frecuencia natural dada por
-
-\begin{equation}\label{eq2}
-    \omega_0=\frac{2\pi}{T},
-\end{equation}
-con $T$ el período de oscilación del sistema ...
-
-\begin{equation}
-    \varphi(t) = ... ,
-\end{equation}
-donde $\omega'$ ..
-
-\subsection{Oscilador forzado}
-
-... si actúa el forzado ...
-\begin{equation}
-    \varphi(t) = ... ,
-\end{equation}
-donde ... y $\delta$ estará dado por
-\begin{equation}
-    \delta = ... ,
-\end{equation}
-con $M_{max}$ ...
-
-\textit{(Todo esto es a modo de ejemplo, por lo que deberán colocar las ecuaciones que utilizaron para los experimentos en la manera que consideren más apropiada). Recuerden respetar fielmente el formato, en cuanto a los signos de puntuación en las ecuaciones, no dejar sangría luego de una ecuación, la enumeración de las mismas, explicar/desarrollar la totalidad de las variables de una ecuación, etc.}
-
-
-\section{Método experimental}
-
-Aquí debe detallarse exhaustivamente todo lo que se hizo en el transcurso de la práctica que sea relevante para la comprensión de la misma. Si bien los lectores del informe en este caso son los docentes de la materia, debe estar escrito de manera tal que alguien que no haya estado presente durante la realización de la práctica entienda claramente qué es lo que se hizo (esto puede incluir detalles que no necesariamente están incluidos en el modelo de informe que acompaña a esta guía). Además, es fundamental incluir una o más figuras que muestren el dispositivo experimental montado o utilizado, ya sea una foto y/o un esquema. Cada una estas figuras deben ser acompañadas debajo por una leyenda en donde figure:
-\begin{itemize}
-    \item “Figura”. Aunque esta aclaración parezca redundante, el punto es que no se debe colocar ninguna otra denominación más que estas dos: todas las imágenes ya sean gráficos, fotos, diagramas, esquemas, etc., caen bajo la denominación de “figura”.
-    \item El número de la figura (N). El objetivo de numerar las figuras es poder referenciarlas fácilmente en el cuerpo del trabajo.
-    \item Una descripción breve que explique qué es lo que se está observando. La idea es que el lector pueda captar, a golpe de vista, qué información brinda la figura en cuestión sin necesidad, en la medida posible, de tener que referirnos al cuerpo del trabajo para tener un entendimiento en términos generales.
-\end{itemize}
-
-\textit{Ejemplo}: Para llevar a cabo el experimento se utilizó un Péndulo de Pohl, como el que se puede observar en la Figura \ref{fig1}. Además, para todas las experiencias se utilizó un cronómetro marca Casio con una incerteza de $0.01$ s y además se utilizó ... 
-
-\begin{figure}[ht]
-    \centering
- %   \includegraphics[width=6cm]{pohl-esquema.png}
-    \caption{Acá va una descripción de esquema/figura/fotografía que se muestra. Recordar etiquetar todos los componentes/instrumentos utilizados que se observen en la imagen. \textit{Ejemplo:} Esquema utilizado para el armado experimental, donde se puede observar el Péndulo de Pohl (A), el instrumento X (B), el instrumento Y (C), etc..}
-    \label{fig1}
-\end{figure}
-
-\subsection{Oscilador libre}
-
-\textit{Contar acá qué se midió (variables, procedimientos, etc) y cómo se midió (técnicas, metodología, instrumentos utilizados y cómo se configuraron los mismos, etc)}
-
-\subsection{Oscilador amortiguado}
-
-\textit{lo mismo que en la subsección anterior}
-
-\subsection{Oscilador forzado}
-
-\textit{lo mismo que en la subsección anterior}
-
-
-\section{Resultados}
-
-Esta sección incluye no sólo los resultados concretos obtenidos, que pueden mostrarse a través de tablas o gráficos, sino también una discusión de los mismos (¿los resultados coinciden con lo esperado a partir del marco teórico? ¿Sí? ¿No? ¿Por qué?). Esto último es tan importante como la presentación misma de los resultados.
-
-En cuanto a la presentación de resultados, en esta sección no deben aparecer ni tablas ni figuras solas, sino que debe haber texto que los introduzca (\textit{por ejemplo: “En la tabla N se muestran los períodos medidos en la experiencia descrita en la sección M”}), así como discusiones sobre los resultados allí mostrados. Toda la reglamentación antes mencionada para las figuras también aplica a las tablas (“Tabla", numeración y texto explicativo).
-
-En particular para las figuras en que se muestren resultados/mediciones experimentales (en su gran mayoría serán gráficos) deben figurar necesariamente los puntos que se corresponden a los valores medidos, eventualmente acompañados de barras de error (opcional para la materia). Es decir, es formalmente incorrecto mostrar solamente una línea continua sin los puntos que la forman. Existen ciertos casos, como por ejemplo cuando se ajustan los datos por una función, en las que aparece una línea continua sobre los datos. Además, en todos los ejes de los gráficos deben figurar la magnitud que se está representando y las unidades correspondientes. En los casos en que la magnitud en cuestión sea adimensional o sólo sea relevante su cantidad relativa se pueden definir las unidades del eje como “unidades arbitrarias (u.a.)''.
-
-
-\subsection{Oscilador libre}
-
-\textit{Ejemplo}: A partir de las 10 mediciones realizadas para distintos ángulos iniciales, se obtuvieron los períodos que se pueden observar en la Tabla \ref{tabla1}, .... y luego de hacer las N mediciones se calculó el promedio para finalmente obtener que $T = (1.756 \pm 0.002) \ \mathrm{s}$ ... por medio de la ecuación \ref{eq2} se calculó que ...
-
-
-\begin{table}[ht]
-    \centering
-    \begin{tabular}{|c|c|c|} 
-    \hline
-    \multirow{2}{0.4cm}{$N$} & $\varphi_i$ (u.a) & $T$ (s) \\ 
-     & $ \Delta\varphi_i=0,2$ (u.a) & $\Delta T_{inst}=0,001$ (s) \\  \hline
-         1  &   2,4  &   1,640 \\
-         2  &   2,6  &   1,642 \\ 
-        ... &   ...  &   ...   \\ \hline
-    \end{tabular}
-    \caption{Esto es la leyenda de la tabla. \textit{Ejemplo}: Datos recolectados para el caso de oscilador libre en el cual se midieron ...}
-    \label{tabla1}
-\end{table}
-
-
-
-\subsection{Oscilador amortiguado}
-
-\textit{Ejemplo}: Para el caso del oscilador amortiguado, al soltar el péndulo desde el ángulo $\varphi_0=...$ se obtuvo un pseudoperíodo de ... y por último se pudo calcular un factor de calidad $Q=10.2 \pm 0.5$ por medio de la ecuación X ...
-
-\subsection{Oscilador forzado}
-
-\textit{Ejemplo}: Finalmente ... los datos registrados se volcaron en la Tabla \ref{tabla2}, donde también se calculó el $\omega_e$ para cada período registrado ... y luego de haber calculado esto se graficó $\omega_e$ vs $\varphi_e$ en la Figura \ref{fig2} (\textit{acá primero pueden poner un gráfico con los puntos adquiridos y luego otro con el ajuste y el cálculo de $\Delta \omega$, elijan uds. como presentar los datos}). 
-
-
-
-
-\begin{figure}[ht]
-    \centering
-   % \includegraphics[width=8cm]{pohl-grafico.png}
-    \caption{Acá va una descripción del gráfico, las variables medidas y la forma en que midieron lo que se muestra. }
-    \label{fig2}
-\end{figure}
-
-
-\section{Conclusión}
-
-Podemos pensar en esta sección como un resumen extendido, en el sentido de que debe, nuevamente, resumir lo que se hizo y exponer los resultados y discusiones dadas, ahora enriquecidos por la información que se brindó en el cuerpo del trabajo.
-
-\textit{Ejemplo}: Se pudo observar que ... al comparar el factor de calidad obtenido en el caso subamortiguado con el obtenido
-a partir del gráfico del forzado se obtuvieron que eran semejantes (\textit{en que orden? en cuanto porciento?}) ...
-
-
-\section{Bibliografía}
-\begin{itemize}
-    \item Apuntes de la clase teórica ... del tema ....
-    \item \textit{Nombre del libro, autor, año}
-    \item \hyperlink{http://www.sc.ehu.es/...}{http://www.sc.ehu.es/...}
-\end{itemize}
-
-\section{Apéndice de incertezas}
-
-La incerteza para la frecuencia natural $\omega_0$ se obtiene como
-
-\begin{equation}
-    \Delta\omega_0= ...
-\end{equation}
- 
-lo mismo que para $\omega'$, la cual resulta ser
-
-\begin{equation}
-    \Delta\omega'= ...
-\end{equation}
-
-En el caso del tiempo característico
-\begin{equation}
-    \Delta \tau = ...
-\end{equation}
-
-y el factor de calidad del experimento subamortiguado tiene una incerteza de
-
-\begin{equation}
-    \Delta Q_{amort} = 
-\end{equation}
-
-... \textit{(y así con todas las incertezas calculadas en el trabajo)}
 
 \end{document}
