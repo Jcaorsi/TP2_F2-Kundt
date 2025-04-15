@@ -39,7 +39,7 @@
   \renewcommand{\footrulewidth}{0pt}
 }
 
-% Adjusts table border width
+% Adjusts table bstep width
 \setlength{\arrayrulewidth}{0.5mm}
 
 % Adjusts spacing between table columns
@@ -53,13 +53,22 @@
 %* NEW COMMANDS
 % ******************************
 
-% Creates a custom numbered question command
-\newcounter{order}
-\newcommand{\order}[1]
+% Creates a custom numbered step command (with bold numbers)
+\newcounter{step}
+\newcommand{\step}[1]
 {
   \par\vspace{2ex}
-  \stepcounter{order}
-  \noindent\textbf{\arabic{order}.} #1\par\vspace{1ex}
+  \stepcounter{step}
+  \noindent\textbf{\arabic{step}.} #1\par\vspace{1ex}
+}
+
+% Creates a custon numbered step command (without bold numbers)
+\newcounter{normalstep}
+\newcommand{\normalstep}[1]
+{
+  \par\vspace{1ex}
+  \stepcounter{normalstep}
+  \noindent{\arabic{normalstep}.} #1\par\vspace{1ex}
 }
 
 
@@ -82,13 +91,13 @@
 \maketitle
 
 %* FIRST QUESTION
-\order{¿El micrófono mide variaciones de presión o desplazamientos del aire?}
+\step{¿El micrófono mide variaciones de presión o desplazamientos del aire?}
 
 (Juani)
 
 
 %* SECOND QUESTION
-\order{Determine la frecuencia del modo fundamental y la frecuencia de los siguientes tres armónicos.}
+\step{Determine la frecuencia del modo fundamental y la frecuencia de los siguientes tres armónicos.}
 
 Se sabe que
 \begin{equation}
@@ -118,7 +127,7 @@ Se puede observar que los valores experimentales de los armónicos difieren de l
 
 
 %* THIRD QUESTION
-\order{Calcule la velocidad del sonido}
+\step{Halle la velocidad del sonido dentro del tubo.}
 
 \begin{table}[H]
     \centering
@@ -140,7 +149,22 @@ Luego buscamos el promedio de la velocidad del sonido, obteniendo aproximadament
 
 
 %* FOURTH QUESTION
-\order{Determine el factor de calidad}
+\step{Midan el factor de calidad correspondiente a todos los armónicos registrados.}
+
+Para cada uno de los cuatro armónicos encontrados en los pasos anteriores, se llevaron a cabo las siguientes 
+acciones para medir el factor de calidad correspondiente:
+
+\normalstep{Se comenzó trabajando sobre la señal observada en el osciloscopio, que presentaba dos líneas horizontales superpuestas a la onda. Se colocó una de ellas a la mitad de la amplitud de la señal y no se la  volvió a modificar. La otra línea se ajustó para que coincidiera con el máximo de la onda en la frecuencia correspondiente al armónico $n$.}
+
+\normalstep{Se registró el voltaje mostrado por el osciloscopio en ese punto, llamándolo $V_\mathrm{max}$ asociado al armónico $n$. Luego se calculó el valor $V_\mathrm{max}/\sqrt{2}$ y se modificó la posición de la línea superior hasta que el valor indicado en pantalla coincidiera con este nuevo valor.}
+
+\normalstep{Con el micrófono fijo y manteniendo la onda en el armónico $n$, se varió manualmente la frecuencia hacia arriba y hacia abajo, utilizando la perilla del generador. En ambos casos, se buscó el punto en el que la amplitud de la señal disminuía hasta tocar apenas la línea correspondiente a $V_\mathrm{max}/\sqrt{2}$. Las frecuencias en las que esto ocurría se anotaron como $f^-$ (al disminuir la frecuencia) y $f^+$ (al aumentarla).}
+
+\normalstep{Finalmente, se calculó el factor de calidad $Q$ para cada armónico mediante la fórmula:
+$$Q = \frac{f_n}{f^+ - f^-}$$
+donde $f_n$ es la frecuencia central del armónico $n$, y $f^+$, $f^-$ son las frecuencias en las que la amplitud de la señal alcanzaba $V_\mathrm{max}/\sqrt{2}$.}
+
+Los resultados obtenidos se resumen en la siguiente tabla:
 
 \begin{table}[H]
     \centering
@@ -148,9 +172,9 @@ Luego buscamos el promedio de la velocidad del sonido, obteniendo aproximadament
     \hline
     \multirow{1}{2.1cm}{\centering Armónicos} 
         & $V_\mathrm{max} (mV)$
-        & $\frac{V_\mathrm{max}}{\sqrt{2}}$ $(mV)$ 
-        & $f^+$ (s$^{-1}$) 
-        & $f^-$ (s$^{-1}$)
+        & $V_\mathrm{max}/\sqrt{2} (mV)$ 
+        & $f^+$ (Hz) 
+        & $f^-$ (Hz)
         & $Q$ \\
     \hline
     $f_1$  & 160 & 113 & 357 & 337 & 17\\ \hline
@@ -158,8 +182,12 @@ Luego buscamos el promedio de la velocidad del sonido, obteniendo aproximadament
     $f_3$  & 212  & 150 & 980 & 945 & 27\\ \hline
     $f_4$  & 200  & 140 & 1249 & 1090 & 7\\ \hline
     \end{tabular}
-    \caption{Datos obtenidos a partir de la experiencia y del reemplazo de los mismos en la ecuación del factor de calidad}
+    \caption{Mediciones del ancho de banda correspondiente a cada armónico $n$ y cálculo del factor de calidad $Q$ asociado.}
     \label{tabla3}
 \end{table}
+
+Si bien las mediciones estuvieron sujetas a un importante margen de error —tanto por las limitaciones del equipo como por la dificultad de ajustar con precisión las frecuencias—, los valores obtenidos son razonables. 
+
+El factor de calidad $Q$ no depende únicamente de la frecuencia, sino también de las características particulares de cada resonancia. En consecuencia, no hay una relación fija entre los factores de calidad correspondientes a distintos armónicos, como puede apreciarse en los resultados obtenidos.
 
 \end{document}
