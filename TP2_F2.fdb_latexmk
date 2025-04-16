@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1744729679.43034 "e:/3C/Física 2/Práctica/Experimental/TP2_F2-Kundt/TP2_F2.tex" "TP2_F2.pdf" "TP2_F2" 1744729680.83554 0
+["pdflatex"] 1744763790.08488 "e:/3C/Física 2/Práctica/Experimental/TP2_F2-Kundt/TP2_F2.tex" "TP2_F2.pdf" "TP2_F2" 1744763791.68829 0
   "C:/Users/iandi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1744672006 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/iandi/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1744313829 12036089 eba673d2e89a785747c798e20fa9975b ""
   "C:/Users/iandi/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx12.tfm" 1136765053 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -73,10 +73,10 @@
   "C:/Users/iandi/AppData/Local/Programs/MiKTeX/tex/latex/refcount/refcount.sty" 1576433952 9878 9e94e8fa600d95f9c7731bb21dfb67a4 ""
   "C:/Users/iandi/AppData/Local/Programs/MiKTeX/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1657800696 9714 ba3194bd52c8499b3f1e3eb91d409670 ""
   "C:/Users/iandi/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
-  "TP2_F2.aux" 1744729682 1595 ba181613d99a5719e20c2230e878e258 "pdflatex"
-  "TP2_F2.out" 1744729682 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "TP2_F2.tex" 1744729676 9447 ee835e83a69d874c416a91ac889dadad ""
-  "e:/3C/Física 2/Práctica/Experimental/TP2_F2-Kundt/TP2_F2.tex" 1744729676 9447 ee835e83a69d874c416a91ac889dadad ""
+  "TP2_F2.aux" 1744763792 1641 b823dec61037037977653c653a28a3b4 "pdflatex"
+  "TP2_F2.out" 1744763792 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "TP2_F2.tex" 1744763790 10908 2dc3fb8de55a48df0241ed891a4edaf1 ""
+  "e:/3C/Física 2/Práctica/Experimental/TP2_F2-Kundt/TP2_F2.tex" 1744763790 10908 2dc3fb8de55a48df0241ed891a4edaf1 ""
   (generated)
   "TP2_F2.aux"
   "TP2_F2.log"

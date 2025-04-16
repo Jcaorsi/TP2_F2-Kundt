@@ -93,7 +93,13 @@
 %* FIRST QUESTION
 \step{¿El micrófono mide variaciones de presión o desplazamientos del aire?}
 
-(Juani)
+En una onda estacionaria longitudinal, las regiones donde las partículas de aire no se mueven (nodos de desplazamiento) coinciden con aquellas donde la presión fluctúa con mayor intensidad (antinodos de presión). Esto se debe a que, cuando las partículas no pueden desplazarse, cualquier compresión o expansión de las regiones adyacentes se manifiesta como una variación más intensa de presión en ese punto. Esto es lo que ocurre en los extremos del tubo, puesto que, como se mantienen cerrados, el aire en ellos no puede seguir desplazándose.
+
+Al ubicar el micrófono en uno de los extremos del tubo, la señal registrada por el osciloscopio no se anuló, independientemente de la frecuencia generada. Esto sugiere que el micrófono mide variaciones de presión y no desplazamientos del aire.
+
+Dado que la onda estudiada es de presión, consideramos a los extremos del tubo como libres puesto que en ellos siempre hay antinodos de presión. Sin embargo, es importante notar que el modelo estudiado es válido solo si la vibración de la membrana del parlante es de pequeña amplitud y si la deformación del micrófono ante la onda es despreciable, como se aclara en la guía de laboratorio.
+
+Dado que en las secciones siguientes se debe trabajar con las frecuencias $f_{n}$ asociadas a cada armónico $n$ y con la amplitud de las señales generadas, se ubica el micrófono en uno de los extremos del tubo. Al ser un antinodo de presión, y la amplitud registrada por el osciloscopio es máxima en cada armónico y facilita el registro de datos en los pasos siguientes del experimento.
 
 
 %* SECOND QUESTION
@@ -130,22 +136,20 @@ La amplitud de la señal es máxima en las frecuencias $f_{n}$. En los valores c
 Los datos obtenidos se resumen en la siguiente tabla:
 
 \begin{table}[H]
-    \centering
-    \begin{tabular}{|c|c|c|}
-    \hline
-    \multirow{2}{2.1cm}{ Armónicos }
-        & Valores Teóricos (Hz) & Valores Experimentales (Hz)\\
-    \hline
-    $f_1$  & 330  & 346 \\ \hline
-    $f_2$  & 660 & 666 \\ \hline
-    $f_3$  & 990 & 960 \\ \hline
-    $f_4$  & 1320  & 1177 \\ \hline
-    \end{tabular}
-    \caption{Estimaciones teóricas y valores experimentales de las frecuencias $f_{n}$ asociadas a cada armónico $n$.}
-    \label{tabla1}
+  \centering
+  \begin{tabular}{|c|c|c|}
+  \hline
+  Frecuencias & Estimaciones teóricas (Hz) & Valores Experimentales (Hz)\\
+  \hline
+  $f_1$  & 330  & 346 \\ \hline
+  $f_2$  & 660 & 666 \\ \hline
+  $f_3$  & 990 & 960 \\ \hline
+  $f_4$  & 1320  & 1177 \\ \hline
+  \end{tabular}
+  \caption{\centering Estimaciones teóricas y valores experimentales de las frecuencias $f_{n}$ asociadas a cada armónico $n$.}
+  \label{tabla1}
 \end{table}
 
-%! CORREGIR TABLA (frecuencias en vez de armónicos y estimaciones teóricas en vez de valores teóricos)
 Como se puede observar en la tabla \ref{tabla1}, los valores experimentales difieren de las estimaciones teóricas. Esto se debe a que el tubo no es ideal, llegando incluso a escucharse el sonido del parlante, lo que implica que el sistema pierde energía.
 
 
@@ -220,7 +224,7 @@ Esto se repitió para cada uno de los cuatro armónicos encontrados en las secci
     $f_3$  & 212  & 150 & 980 & 945 & 27\\ \hline
     $f_4$  & 200  & 140 & 1249 & 1090 & 7\\ \hline
     \end{tabular}
-    \caption{Mediciones del ancho de banda correspondiente a cada armónico $n$ y cálculo del factor de calidad $Q$ asociado.}
+    \caption{\centering Mediciones del ancho de banda correspondiente a cada armónico $n$ y cálculo del factor de calidad $Q$ asociado.}
     \label{tabla3}
 \end{table}
 
